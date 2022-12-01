@@ -7,7 +7,7 @@ function ProductView({ products }) {
 
   // TODO: Replace with state variable
   const [sideOpen, setSideOpen] = useState(true);
-  const [selectedProduct, setSelectedProduct] = useState(true)
+  const [selectedProduct, setSelectedProduct] = useState('')
 
 
   return (
@@ -31,7 +31,7 @@ function ProductView({ products }) {
             {sideOpen ? '>' : '<'}
           </div>
         </div>
-        <ProductDetails visible={sideOpen} />
+        <ProductDetails visible={sideOpen} product={selectedProduct} /> 
       </div>
     </div>
   );
