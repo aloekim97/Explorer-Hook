@@ -7,7 +7,7 @@ function ProductView({ products }) {
 
   // TODO: Replace with state variable
   const [sideOpen, setSideOpen] = useState(true);
-
+  const [selectedProduct, setSelectedProduct] = useState(true)
 
 
   return (
@@ -19,7 +19,7 @@ function ProductView({ products }) {
             <ProductListItem
               key={item.id}
               product={item}
-              onClick={() => console.log('SELECT PRODUCT', item)}
+              onClick={() => setSelectedProduct(item)}
             />
           )}
         </div>
